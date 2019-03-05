@@ -40,44 +40,44 @@ function runSearch() {
       ]
     })
     .then(function(answer) {
-      switch (answer.response) {
-      case "idPuck":
+      switch (answer.id) {
+      case "puck":
       puckIt();
       break;
 
-      case "idCd":
+      case "cd":
       cdIt();
       break;
 
-      case "idBread":
+      case "bread":
       breadIt();
       break;
 
-      case "idWrench":
+      case "wrench":
       wrenchIt();
       break;
 
-      case "idBall":
+      case "ball":
       ballIt();
       break;
 
-      case "idMiracle":
+      case "Miracle":
       miracleYah();
       break;
 
-      case "idIpad":
+      case "ipad":
       ipadZ();
       break;
 
-      case "idBat":
+      case "bat":
       batterUp();
       break;
 
-      case "idFrozenPizza":
+      case "frozen pizza":
       frozenZa();
       break;
 
-      case "idHammer":
+      case "hammer":
       hammerIt();
       break;
        
