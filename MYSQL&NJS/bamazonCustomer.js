@@ -23,7 +23,7 @@ connection.connect(function(err) {
 function runSearch() {
   inquirer
     .prompt({
-      name: "action",
+      name: "id",
       type: "rawlist",
       message: "What would you like to buy?",
       choices: [
@@ -84,3 +84,20 @@ function runSearch() {
       }
     });
 }
+function puckIt() {
+    inquirer
+            .prompt({
+              name: "quantity",
+              type: "input",
+              message: "How many items would you like to purchase?"
+            })
+            .then(function(answer) {
+              var quantity = answer.quantity;
+              if (quantity > res[0].stock_quantity) {
+                console.log( "Our Apologies we only have " + res[0].stock_quantity + " items of the product selected")
+              }
+              runSearch();
+            })
+        };
+    
+              
