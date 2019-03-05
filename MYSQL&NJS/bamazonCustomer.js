@@ -40,19 +40,47 @@ function runSearch() {
       ]
     })
     .then(function(answer) {
-      switch (answer.action) {
-      case "Find that item":
-        itemFinder();
-        break;
+      switch (answer.response) {
+      case "idPuck":
+      puckIt();
+      break;
 
-      case "Find how much of that item is in stock":
-        quantFind();
-        break;
+      case "idCd":
+      cdIt();
+      break;
 
-        default:
-            console.log("Insufficient quantity");
-            break;
+      case "idBread":
+      breadIt();
+      break;
+
+      case "idWrench":
+      wrenchIt();
+      break;
+
+      case "idBall":
+      ballIt();
+      break;
+
+      case "idMiracle":
+      miracleYah();
+      break;
+
+      case "idIpad":
+      ipadZ();
+      break;
+
+      case "idBat":
+      batterUp();
+      break;
+
+      case "idFrozenPizza":
+      frozenZa();
+      break;
+
+      case "idHammer":
+      hammerIt();
+      break;
+       
       }
     });
 }
-
