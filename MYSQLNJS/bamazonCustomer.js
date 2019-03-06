@@ -91,17 +91,18 @@ function puckIt() {
               type: "input",
               message: "How many items would you like to purchase? ",
               validate: function(answer) {
-              var query = "SELECT stock_quantity FROM products";
+              var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
               connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
                 for (var i = 0; i < res.length; i++) {
-                    console.log("stock_quantity: " + res[0].stock_quantity + " || you got some pucks ");
+                    console.log("stock_quantity: " + res[0].stock_quantity + " ");
                   } 
                   if (answer < res[0].stock_quantity) {
                     console.log( "added to your cart " + res[0].stock_quantity + " you got some pucks")
                   }
 
+
                 if (answer > res[0].stock_quantity) {
-                    console.log( "Our Apologies we only have " + res[0].stock_quantity + " items of the product selected")
+                    console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
                   }
                   runSearch();
                   connection.end();
