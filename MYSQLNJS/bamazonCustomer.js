@@ -97,7 +97,7 @@ function puckIt() {
                     console.log("stock_quantity: " + res[0].stock_quantity + " ");
                   } 
                   if (answer < res[0].stock_quantity) {
-                    console.log( "added to your cart " + res[0].s + " you got some pucks")
+                    console.log( "added to your cart " + answer + " you got some pucks")
                   }
 
 
