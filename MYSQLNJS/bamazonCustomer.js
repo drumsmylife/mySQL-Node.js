@@ -110,5 +110,242 @@ function puckIt() {
               }
             })
         };
+
+        function cdIt() {
+          inquirer
+                  .prompt({
+                    name: "quantity",
+                    type: "input",
+                    message: "How many items would you like to purchase? ",
+                    validate: function(answer) {
+                    var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
+                    connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
+                      for (var i = 0; i < res.length; i++) {
+                          console.log("stock_quantity: " + res[0].stock_quantity + " ");
+                        } 
+                        if (answer < res[0].stock_quantity) {
+                          console.log( "added to your cart " + answer + " you got some cd's")
+                        }
+      
+      
+                      if (answer > res[0].stock_quantity) {
+                          console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
+                        }
+                        runSearch();
+                        connection.end();
+                      })
+                    }
+                  })
+              };
+
+              function breadIt() {
+                inquirer
+                        .prompt({
+                          name: "quantity",
+                          type: "input",
+                          message: "How many items would you like to purchase? ",
+                          validate: function(answer) {
+                          var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
+                          connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
+                            for (var i = 0; i < res.length; i++) {
+                                console.log("stock_quantity: " + res[0].stock_quantity + " ");
+                              } 
+                              if (answer < res[0].stock_quantity) {
+                                console.log( "added to your cart " + answer + " you got some bread!")
+                              }
+            
+            
+                            if (answer > res[0].stock_quantity) {
+                                console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
+                              }
+                              runSearch();
+                              connection.end();
+                            })
+                          }
+                        })
+                    };
     
+                  function wrenchIt() {
+                      inquirer
+                              .prompt({
+                                name: "quantity",
+                                type: "input",
+                                message: "How many items would you like to purchase? ",
+                                validate: function(answer) {
+                                var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
+                                connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
+                                  for (var i = 0; i < res.length; i++) {
+                                      console.log("stock_quantity: " + res[0].stock_quantity + " ");
+                                    } 
+                                    if (answer < res[0].stock_quantity) {
+                                      console.log( "added to your cart " + answer + " you got some wrenches!")
+                                    }
+                  
+                  
+                                  if (answer > res[0].stock_quantity) {
+                                      console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
+                                    }
+                                    runSearch();
+                                    connection.end();
+                                  })
+                                }
+                              })
+                          };
+                          function ballIt() {
+                            inquirer
+                                    .prompt({
+                                      name: "quantity",
+                                      type: "input",
+                                      message: "How many items would you like to purchase? ",
+                                      validate: function(answer) {
+                                      var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
+                                      connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
+                                        for (var i = 0; i < res.length; i++) {
+                                            console.log("stock_quantity: " + res[0].stock_quantity + " ");
+                                          } 
+                                          if (answer < res[0].stock_quantity) {
+                                            console.log( "added to your cart " + answer + "balls")
+                                          }
+                        
+                        
+                                        if (answer > res[0].stock_quantity) {
+                                            console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
+                                          }
+                                          runSearch();
+                                          connection.end();
+                                        })
+                                      }
+                                    })
+                                };
+                                function miracleYah() {
+                                  inquirer
+                                          .prompt({
+                                            name: "quantity",
+                                            type: "input",
+                                            message: "How many items would you like to purchase? ",
+                                            validate: function(answer) {
+                                            var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
+                                            connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
+                                              for (var i = 0; i < res.length; i++) {
+                                                  console.log("stock_quantity: " + res[0].stock_quantity + " ");
+                                                } 
+                                                if (answer < res[0].stock_quantity) {
+                                                  console.log( "added to your cart " + answer + " good movie choice!")
+                                                }
+                              
+                              
+                                              if (answer > res[0].stock_quantity) {
+                                                  console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
+                                                }
+                                                runSearch();
+                                                connection.end();
+                                              })
+                                            }
+                                          })
+                                      };
               
+                                      function ipadZ() {
+                                        inquirer
+                                                .prompt({
+                                                  name: "quantity",
+                                                  type: "input",
+                                                  message: "How many items would you like to purchase? ",
+                                                  validate: function(answer) {
+                                                  var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
+                                                  connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
+                                                    for (var i = 0; i < res.length; i++) {
+                                                        console.log("stock_quantity: " + res[0].stock_quantity + " ");
+                                                      } 
+                                                      if (answer < res[0].stock_quantity) {
+                                                        console.log( "added to your cart " + answer + " you got some ipads!")
+                                                      }
+                                    
+                                    
+                                                    if (answer > res[0].stock_quantity) {
+                                                        console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
+                                                      }
+                                                      runSearch();
+                                                      connection.end();
+                                                    })
+                                                  }
+                                                })
+                                            };
+                                            function batterUp() {
+                                              inquirer
+                                                      .prompt({
+                                                        name: "quantity",
+                                                        type: "input",
+                                                        message: "How many items would you like to purchase? ",
+                                                        validate: function(answer) {
+                                                        var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
+                                                        connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
+                                                          for (var i = 0; i < res.length; i++) {
+                                                              console.log("stock_quantity: " + res[0].stock_quantity + " ");
+                                                            } 
+                                                            if (answer < res[0].stock_quantity) {
+                                                              console.log( "added to your cart " + answer + " you got some bats!")
+                                                            }
+                                          
+                                          
+                                                          if (answer > res[0].stock_quantity) {
+                                                              console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
+                                                            }
+                                                            runSearch();
+                                                            connection.end();
+                                                          })
+                                                        }
+                                                      })
+                                                  };
+
+                                                  function frozenZa() {
+                                                    inquirer
+                                                            .prompt({
+                                                              name: "quantity",
+                                                              type: "input",
+                                                              message: "How many items would you like to purchase? ",
+                                                              validate: function(answer) {
+                                                              var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
+                                                              connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
+                                                                for (var i = 0; i < res.length; i++) {
+                                                                    console.log("stock_quantity: " + res[0].stock_quantity + " ");
+                                                                  } 
+                                                                  if (answer < res[0].stock_quantity) {
+                                                                    console.log( "added to your cart " + answer + " you got some pizzas!")
+                                                                  }
+                                                
+                                                
+                                                                if (answer > res[0].stock_quantity) {
+                                                                    console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
+                                                                  }
+                                                                  runSearch();
+                                                                  connection.end();
+                                                                })
+                                                              }
+                                                            })
+                                                        };
+                                                       function hammerIt() {
+                                                          inquirer
+                                                                  .prompt({
+                                                                    name: "quantity",
+                                                                    type: "input",
+                                                                    message: "How many items would you like to purchase? ",
+                                                                    validate: function(answer) {
+                                                                    var query = "SELECT stock_quantity FROM products WHERE item_id = 'answer' ";
+                                                                    connection.query(query, { stock_quantity: answer.stock_quantity }, function(err,res) {
+                                                                      for (var i = 0; i < res.length; i++) {
+                                                                          console.log("stock_quantity: " + res[0].stock_quantity + " ");
+                                                                        } 
+                                                                        if (answer < res[0].stock_quantity) {
+                                                                          console.log( "added to your cart " + answer + " you got some hammers!")
+                                                                        }
+                                                      
+                                                      
+                                                                      if (answer > res[0].stock_quantity) {
+                                                                          console.log( "NOPE we only have " + res[0].stock_quantity + " of that item")
+                                                                        }
+                                                                        runSearch();
+                                                                        connection.end();
+                                                                      })
+                                                                    }
+                                                                  })
+                                                              };
