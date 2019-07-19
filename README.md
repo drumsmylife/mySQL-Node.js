@@ -22,3 +22,4 @@ Running this application will first display all of the items available for sale.
 
 3. MySQL
 
+4. Javascript
