@@ -14,3 +14,11 @@ Running this application will first display all of the items available for sale.
 # 4. The connection will end if there is not enough in stock
 
 # 5. If there is enough of that item in stock, that item stock quantity will be updated and shown how much is left.
+
+# Tech Used
+1. HTML
+
+2. NodeJS
+
+3. MySQL
+
